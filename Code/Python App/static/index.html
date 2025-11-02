@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pillex — Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:," />
+  <style>
+    /* Simple focus ring for accessibility */
+    :focus { outline: none; }
+    :focus-visible { box-shadow: 0 0 0 3px rgba(59,130,246,.5); border-radius: .5rem; }
+    /* Monospace logs */
+    #logs { white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Top Nav -->
+  <header class="border-b border-gray-200 sticky top-0 z-40 bg-white/90 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-xl bg-blue-600"></div>
+        <a href="#/" class="font-semibold text-lg">Pillex</a>
+        <nav class="ml-6 hidden sm:flex items-center gap-4 text-sm">
+          <a href="#/dashboard" class="nav-link text-gray-600 hover:text-blue-600">Dashboard</a>
+          <a href="#/admin" class="nav-link text-gray-600 hover:text-blue-600">Admin</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <span id="userChip" class="hidden sm:inline text-sm text-gray-600"></span>
+        <button id="logoutBtn" class="hidden px-3 py-1.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Container -->
+  <main class="max-w-6xl mx-auto p-4" id="app"></main>
+
+  <!-- Toasts -->
+  <div id="toast" class="fixed bottom-4 left-1/2 -translate-x-1/2 hidden px-4 py-2 rounded-xl bg-gray-900 text-white text-sm shadow-lg"></div>
+
+  <script>
+    // ---------- Config ----------
+    const API_BASE = ""; // same-origin, endpoints under /api/*
+
+    // ---------- State ----------
+    const state = {
+      me: null,               // {authenticated, user}
+      data: null,             // AllCartridgeData
+      logs: "",
+      autoRefreshLogs: true,
+      logsIntervalId: null,
+      scheduleTimer: null,
+    };
+
+    // ---------- Utilities ----------
+    function toast(msg, ms = 2200) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.remove('hidden');
+      clearTimeout(el._t);
+      el._t = setTimeout(() => el.classList.add('hidden'), ms);
+    }
+
+    async function apiFetch(url, opts = {}) {
+      const res = await fetch(API_BASE + url, {
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json', ...(opts.headers||{}) },
+        ...opts,
+      });
+      return res;
+    }
+
+    async function apiJSON(url, opts = {}) {
+      const res = await apiFetch(url, opts);
+      // If endpoint returns text/plain (e.g., /api/logs), don't parse as JSON here
+      const ct = res.headers.get('content-type') || '';
+      if (!res.ok) {
+        let message = `${res.status} ${res.statusText}`;
+        try {
+          if (ct.includes('application/json')) {
+            const body = await res.json();
+            if (body && (body.error || body.reason)) message = body.error || body.reason;
+          } else {
+            const bodyText = await res.text();
+            if (bodyText) message = bodyText.slice(0, 200);
+          }
+        } catch {}
+        if (res.status === 401) {
+          // not authenticated
+          if (location.hash !== '#/' && location.hash !== '') {
+            toast('Session expired. Please log in.');
+          }
+          navigate('#/');
+        }
+        throw new Error(message);
+      }
+      if (ct.includes('application/json')) return res.json();
+      return res.text();
+    }
+
+    function navigate(hash) { location.hash = hash; }
+
+    function ensureAuthOrRedirect() {
+      if (!state.me || !state.me.authenticated) { navigate('#/'); return false; }
+      return true;
+    }
+
+    function ensureAdminOrRedirect() {
+      if (!ensureAuthOrRedirect()) return false;
+      if (!state.me.user || !state.me.user.is_admin) {
+        toast('Admin only');
+        navigate('#/dashboard');
+        return false;
+      }
+      return true;
+    }
+
+    function fmtDayTimeShort(iso) {
+      // Example desired: 20 Aug 2025 - 7:00
+      const d = new Date(iso);
+      const day = d.toLocaleDateString(undefined, { day: '2-digit', month: 'short', year: 'numeric' });
+      const time = d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+      return `${day} - ${time}`.replace(',','');
+    }
+
+    function fmtDateTime(iso) {
+      const d = new Date(iso);
+      return d.toLocaleString(undefined, { year:'numeric', month:'short', day:'2-digit', hour:'2-digit', minute:'2-digit' });
+    }
+
+    function statusBadge(status) {
+      const base = 'px-2 py-0.5 rounded-full text-xs font-medium border';
+      const map = {
+        DUE: 'bg-gray-50 text-gray-700 border-gray-200',
+        ACTIVE: 'bg-blue-50 text-blue-700 border-blue-200',
+        TAKEN: 'bg-green-50 text-green-700 border-green-200',
+        MISSED: 'bg-red-50 text-red-700 border-red-200',
+      };
+      return `<span class="${base} ${map[status]||map.DUE}">${status}</span>`;
+    }
+
+    function doseSummary(cmd, cartridge) {
+      if (!cmd || !cartridge) return '—';
+      const parts = [];
+      for (const k of ['mod1','mod2','mod3','mod4']) {
+        const n = cmd[k]||0; if (!n) continue;
+        const mod = cartridge[k];
+        const name = mod ? mod.med_name : k;
+        parts.push(`${n}× ${escapeHtml(name)}`);
+      }
+      return parts.join(', ') || '—';
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[s]));
+    }
+
+    function setUserChip() {
+      const chip = document.getElementById('userChip');
+      const logoutBtn = document.getElementById('logoutBtn');
+      if (state.me && state.me.authenticated) {
+        chip.textContent = `${state.me.user.username} (${state.me.user.email})`;
+        chip.classList.remove('hidden');
+        logoutBtn.classList.remove('hidden');
+      } else {
+        chip.classList.add('hidden');
+        logoutBtn.classList.add('hidden');
+      }
+    }
+
+    // ---------- Pages ----------
+    async function render() {
+      const app = document.getElementById('app');
+      const route = location.hash || '#/'
+      setUserChip();
+      if (route === '#/' || route.startsWith('#/login')) return renderLogin(app);
+      if (route.startsWith('#/dashboard')) return renderDashboard(app);
+      if (route.startsWith('#/admin')) return renderAdmin(app);
+      // fallback
+      navigate('#/');
+    }
+
+    function card({ title, action = '', body = '' }) {
+      return `
+        <section class="bg-white rounded-2xl border border-gray-200 shadow-sm p-4 sm:p-6">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="text-base sm:text-lg font-semibold text-gray-900">${title}</h2>
+            ${action}
+          </div>
+          <div>${body}</div>
+        </section>
+      `;
+    }
+
+    async function renderLogin(app) {
+      // stop background tasks
+      stopPolling();
+      app.innerHTML = `
+        <div class="max-w-md mx-auto mt-10">
+          <div class="text-center mb-6">
+            <h1 class="text-2xl font-semibold">Welcome to <span class="text-blue-600">Pillex</span></h1>
+            <p class="text-gray-500 text-sm">Sign in to continue</p>
+          </div>
+          <form id="loginForm" class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm space-y-4">
+            <div>
+              <label class="block text-sm text-gray-700 mb-1">Email</label>
+              <input type="email" name="email" required placeholder="admin@example.com" class="w-full rounded-xl border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
+            </div>
+            <div>
+              <label class="block text-sm text-gray-700 mb-1">Password</label>
+              <input type="password" name="password" required placeholder="admin" class="w-full rounded-xl border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
+            </div>
+            <button class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-2 font-medium">Sign in</button>
+            <p id="loginErr" class="hidden text-sm text-red-600"></p>
+          </form>
+        </div>`;
+
+      document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const body = { email: f.email.value.trim(), password: f.password.value };
+        try {
+          const data = await apiJSON('/api/login', { method:'POST', body: JSON.stringify(body) });
+          if (data.ok) {
+            state.me = { authenticated: true, user: data.user };
+            toast('Logged in');
+            setUserChip();
+            navigate('#/dashboard');
+          } else {
+            throw new Error(data.reason || 'Login failed');
+          }
+        } catch(err) {
+          const el = document.getElementById('loginErr');
+          el.textContent = err.message || 'Invalid credentials';
+          el.classList.remove('hidden');
+        }
+      });
+    }
+
+    async function renderDashboard(app) {
+      if (!ensureAuthOrRedirect()) return;
+      // fetch all data if missing
+      if (!state.data) {
+        try {
+          state.data = await apiJSON('/api/all_cartridge_data');
+        } catch (e) {
+          // fallback: try smaller pieces
+          const [cartridge, prescription, schedule, info] = await Promise.all([
+            apiJSON('/api/cartridge').catch(()=>null),
+            apiJSON('/api/prescription').catch(()=>null),
+            apiJSON('/api/schedule').catch(()=>[]),
+            apiJSON('/api/info').catch(()=>null),
+          ]);
+          state.data = { cartridge, prescription, schedule, info };
+        }
+      }
+
+      const { cartridge, prescription, schedule, info } = state.data || {};
+
+      const btnActivate = info && !info.activated
+        ? `<button class="px-3 py-1.5 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm" onclick="activateCartridge()">Activate cartridge</button>`
+        : '';
+
+      const cardInfo = card({
+        title: 'Prescription',
+        action: btnActivate,
+        body: !prescription ? '<p class="text-sm text-gray-500">No prescription found.</p>' : `
+          <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+            <div><dt class="text-gray-500">Patient</dt><dd class="font-medium">${escapeHtml(prescription.patient.full_name)} <span class="text-gray-500">(DOB ${escapeHtml(prescription.patient.dob)})</span></dd></div>
+            <div><dt class="text-gray-500">Doctor</dt><dd class="font-medium">${escapeHtml(prescription.doctor.full_name)} <span class="text-gray-500">${escapeHtml(prescription.doctor.contact)}</span></dd></div>
+            ${prescription.doctor_message ? `<div class="sm:col-span-2"><dt class="text-gray-500">Doctor message</dt><dd class="font-medium">${escapeHtml(prescription.doctor_message)}</dd></div>` : ''}
+            <div><dt class="text-gray-500">Valid until</dt><dd class="font-medium ${prescription.expired ? 'text-red-600' : ''}">${escapeHtml(prescription.expiry_date)} ${prescription.expired ? '<span class="ml-2 px-2 py-0.5 rounded-md bg-red-50 text-red-700 border border-red-200 text-xs">EXPIRED</span>' : ''}</dd></div>
+            <div><dt class="text-gray-500">Repeat</dt><dd class="font-medium">Every ${escapeHtml(prescription.schedule_repeat_days)} days</dd></div>
+            <div><dt class="text-gray-500">Start day</dt><dd class="font-medium">${escapeHtml(prescription.start_day ?? '—')}</dd></div>
+          </dl>
+        `
+      });
+
+      const mods = ['mod1','mod2','mod3','mod4'].filter(k => cartridge && cartridge[k]);
+      const cartBody = !mods.length ? '<p class="text-sm text-gray-500">Cartridge is empty.</p>' : `
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          ${mods.map(k => {
+            const m = cartridge[k];
+            const pct = m.quantity_start ? Math.max(0, Math.min(100, Math.round((m.quantity / m.quantity_start) * 100))) : 0;
+            return `
+              <div class="p-4 border border-gray-200 rounded-xl">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <div class="text-xs text-gray-500 uppercase tracking-wide">${k.toUpperCase()}</div>
+                    <div class="font-semibold">${escapeHtml(m.med_name)}</div>
+                  </div>
+                  <span class="text-xs px-2 py-0.5 rounded-md bg-gray-50 border border-gray-200">${pct}%</span>
+                </div>
+                <p class="text-sm text-gray-600 mt-1">${escapeHtml(m.description || '')}</p>
+                <div class="mt-3 h-2 bg-gray-100 rounded-full overflow-hidden">
+                  <div class="h-full bg-blue-600" style="width:${pct}%;"></div>
+                </div>
+                <div class="mt-2 text-xs text-gray-600">Qty: <span class="font-medium">${m.quantity}</span> / ${m.quantity_start}</div>
+                <div class="text-xs text-gray-600">Expiry: <span class="font-medium">${escapeHtml(m.expiry_date)}</span></div>
+              </div>`;
+          }).join('')}
+        </div>`;
+
+      const cardCart = card({ title: 'Cartridge', body: cartBody });
+
+      const schedItems = (schedule || []).map(s => {
+        const meds = doseSummary(s.cmd, cartridge);
+        return `
+          <li class="p-4 border border-gray-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div>
+              <div class="font-medium">${fmtDayTimeShort(s.datetime_start)}</div>
+              <div class="text-sm text-gray-600">${meds}</div>
+              <div class="text-xs text-gray-500 mt-1">Window: ${fmtDateTime(s.datetime_start)} – ${fmtDateTime(s.datetime_end)}</div>
+            </div>
+            <div class="flex items-center gap-3 self-start sm:self-auto">
+              ${statusBadge(s.status)}
+            </div>
+          </li>`;
+      }).join('');
+
+      const cardSchedule = card({
+        title: 'Schedule',
+        action: `<div class="flex items-center gap-2">
+            <button class="px-3 py-1.5 rounded-lg border border-gray-300 hover:bg-gray-50 text-sm" onclick="refreshSchedule()">Refresh</button>
+          </div>`,
+        body: (schedule && schedule.length)
+          ? `<ul class="space-y-3">${schedItems}</ul>`
+          : '<p class="text-sm text-gray-500">No schedule available.</p>'
+      });
+
+      app.innerHTML = `
+        <div class="grid grid-cols-1 gap-4">
+          ${cardInfo}
+          ${cardCart}
+          ${cardSchedule}
+        </div>`;
+
+      // start a light schedule refresh every 60s to keep statuses feeling fresh
+      startSchedulePolling();
+    }
+
+    async function renderAdmin(app) {
+      if (!ensureAdminOrRedirect()) return;
+
+      const cmdForm = `
+        <form id="cmdForm" class="flex items-center gap-2">
+          <input name="cmd" placeholder="Enter command (e.g., screen TIME)" class="flex-1 rounded-xl border-gray-300 focus:border-blue-500 focus:ring-blue-500" />
+          <button class="px-3 py-2 rounded-xl bg-blue-600 text-white hover:bg-blue-700">Send</button>
+        </form>
+        <div class="mt-2 flex flex-wrap gap-2">
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('drpall 1 1 1 1')">Drop (All)</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('drp 1')">Drop (Mod 1)</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('drp 2')">Drop (Mod 2)</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('drp 3')">Drop (Mod 3)</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('drp 4')">Drop (Mod 4)</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('screen TAKE_PILL')">screen TAKE_PILL</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('screen TIME')">screen TIME</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('screen LOADING')">screen LOADING</button>
+          <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="sendCmdPreset('screen ERROR')">screen ERROR</button>
+        </div>`;
+
+      const logsBody = `
+        <div class="flex items-center justify-between mb-2">
+          <div class="text-sm text-gray-600">Live logs</div>
+          <div class="flex items-center gap-2">
+            <label class="text-sm text-gray-600 inline-flex items-center gap-2"><input id="autoLogs" type="checkbox" class="rounded" ${state.autoRefreshLogs ? 'checked' : ''} onchange="toggleAutoLogs(this.checked)"> Auto-refresh</label>
+            <button class="px-3 py-1.5 rounded-lg border border-gray-300 text-sm hover:bg-gray-50" onclick="refreshLogs()">Refresh</button>
+          </div>
+        </div>
+        <div class="border border-gray-200 rounded-xl overflow-hidden">
+          <div id="logs" class="p-3 h-[50vh] overflow-auto bg-gray-50 text-gray-800"></div>
+        </div>`;
+
+      app.innerHTML = `
+        <div class="grid grid-cols-1 gap-4">
+          ${card({ title: 'Send Serial Command', body: cmdForm })}
+          ${card({ title: 'Logs', body: logsBody })}
+        </div>`;
+
+      document.getElementById('cmdForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const cmd = e.target.cmd.value.trim();
+        if (!cmd) return;
+        await sendCmd(cmd);
+        e.target.reset();
+      });
+
+      // initial logs load & polling
+      await refreshLogs();
+      startLogPolling();
+    }
+
+    // ---------- Actions ----------
+    async function logout() {
+      try { await apiJSON('/api/logout', { method:'POST' }); } catch {}
+      state.me = { authenticated: false };
+      state.data = null;
+      setUserChip();
+      stopPolling();
+      navigate('#/');
+    }
+
+    async function activateCartridge() {
+      try {
+        const res = await apiJSON('/api/activate_cartridge', { method: 'POST', body: JSON.stringify({ offset: 0 }) });
+        if (res.ok) {
+          toast('Cartridge activated');
+        } else {
+          toast(res.reason || 'Already activated');
+        }
+        // reload all data
+        state.data = await apiJSON('/api/all_cartridge_data');
+        render();
+      } catch (e) { toast(e.message || 'Failed to activate'); }
+    }
+
+    async function refreshSchedule() {
+      try {
+        const sched = await apiJSON('/api/schedule');
+        if (!state.data) state.data = {};
+        state.data.schedule = sched;
+        render();
+      } catch (e) { toast('Failed to refresh schedule'); }
+    }
+
+    async function refreshLogs() {
+      try {
+        const text = await apiJSON('/api/logs'); // text/plain
+        state.logs = text;
+        const el = document.getElementById('logs');
+        if (el) {
+          el.textContent = text || '—';
+          // autoscroll to bottom
+          el.scrollTop = el.scrollHeight;
+        }
+      } catch (e) {
+        toast('Failed to fetch logs');
+      }
+    }
+
+    async function sendCmdPreset(cmd) { await sendCmd(cmd); }
+    async function sendCmd(cmd) {
+      try {
+        const res = await apiJSON('/api/send_cmd', { method:'POST', body: JSON.stringify({ cmd }) });
+        if (res.ok) toast(`Sent: ${cmd}`); else toast(res.reason || 'Failed to send');
+        // small logs refresh
+        refreshLogs();
+      } catch (e) { toast(e.message || 'Failed to send'); }
+    }
+
+    // ---------- Polling ----------
+    function startLogPolling() {
+      stopLogPolling();
+      if (state.autoRefreshLogs) {
+        state.logsIntervalId = setInterval(refreshLogs, 2500);
+      }
+    }
+    function stopLogPolling() { if (state.logsIntervalId) clearInterval(state.logsIntervalId); state.logsIntervalId = null; }
+    function toggleAutoLogs(on) { state.autoRefreshLogs = on; on ? startLogPolling() : stopLogPolling(); }
+
+    function startSchedulePolling() {
+      stopSchedulePolling();
+      state.scheduleTimer = setInterval(refreshSchedule, 60000);
+    }
+    function stopSchedulePolling() { if (state.scheduleTimer) clearInterval(state.scheduleTimer); state.scheduleTimer = null; }
+    function stopPolling() { stopLogPolling(); stopSchedulePolling(); }
+
+    // ---------- Boot ----------
+    async function boot() {
+      // who am I?
+      try { state.me = await apiJSON('/api/me'); } catch { state.me = { authenticated: false }; }
+      setUserChip();
+      render();
+    }
+
+    window.addEventListener('hashchange', render);
+    boot();
+  </script>
+</body>
+</html>

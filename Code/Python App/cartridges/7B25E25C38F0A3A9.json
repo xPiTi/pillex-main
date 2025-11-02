@@ -1,0 +1,87 @@
+{
+  "info": {
+    "manufactured": "2025-08-15",
+    "id": "7B25E25C38F0A3A9",
+    "version": "v0.2",
+    "activated" : false
+  },
+  "cartridge": {
+    "mod1": {
+      "med_name": "vicodin 5mg",
+      "quantity_start": 14,
+      "quantity": 14,
+      "description": "Pain relief",
+      "expiry_date": "2027-01-10"
+    },
+    "mod2": {
+      "med_name": "ibuprofen 200mg",
+      "quantity_start": 14,
+      "quantity": 14,
+      "description": "Anti-inflammatory / painkiller",
+      "expiry_date": "2026-12-20"
+    },
+    "mod3": {
+      "med_name": "amlodipine 5mg",
+      "quantity_start": 14,
+      "quantity": 14,
+      "description": "Blood pressure control",
+      "expiry_date": "2027-06-01"
+    },
+    "mod4": {
+      "med_name": "omeprazole 20mg",
+      "quantity_start": 14,
+      "quantity": 14,
+      "description": "Acid reflux treatment",
+      "expiry_date": "2026-11-15"
+    }
+  },
+  "prescription": {
+    "patient": {
+      "full_name": "Mr John Smith",
+      "dob": "1975-03-09"
+    },
+    "doctor": {
+      "full_name": "Dr Sarah Lin",
+      "contact": "sarah.lin@example.com"
+    },
+    "start_day": null,
+    "expiry_date": "2026-10-31",
+    "expired": false,
+    "schedule_repeat_days": 14,
+    "doctor_message" : "Take 1 tablet Vicodin 5mg in the morning, afternoon take 1 capsule Ibuprofen 200mg + 1 tablet Amlodipine 5mg. On Evening take 1 capsule Omeprazole 20mg. Consume all after food."
+  },
+  "schedule": [
+    {
+      "day": 1,
+      "time_start": "08:00:00",
+      "time_end": "09:00:00",
+      "cmd": { "mod1": 1, "mod2": 0, "mod3": 0, "mod4": 0 },
+      "status": "DUE",
+      "hash" : null
+    },
+    {
+      "day": 1,
+      "time_start": "13:00:00",
+      "time_end": "14:00:00",
+      "cmd": { "mod1": 0, "mod2": 1, "mod3": 1, "mod4": 0 },
+      "status": "DUE",
+      "hash" : null
+    },
+    {
+      "day": 1,
+      "time_start": "19:00:00",
+      "time_end": "20:00:00",
+      "cmd": { "mod1": 0, "mod2": 0, "mod3": 0, "mod4": 1 },
+      "status": "DUE",
+      "hash" : null
+    },
+    {
+      "day": 1,
+      "time_start": "21:43:00",
+      "time_end": "22:00:00",
+      "cmd": { "mod1": 1, "mod2": 0, "mod3": 0, "mod4": 1 },
+      "status": "DUE",
+      "hash" : null
+    }
+  ]
+}

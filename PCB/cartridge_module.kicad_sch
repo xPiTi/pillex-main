@@ -1,0 +1,3477 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "12463544-1dc7-4761-9374-9532eb98ca21")
+	(paper "A4")
+	(title_block
+		(title "Pill Dispenser")
+		(date "21/07/2025")
+		(rev "0.1")
+		(company "Pawel Toborek")
+	)
+	(lib_symbols
+		(symbol "Connector:Conn_01x08_Pin"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x08_Pin"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x08, script generated"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x08_Pin_1_1"
+				(polyline
+					(pts
+						(xy 1.27 -10.16) (xy 0.8636 -10.16)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 0.8636 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 7.62) (xy 0.8636 7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.8636 -10.033)
+					(end 0 -10.287)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 7.747)
+					(end 0 7.493)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 5.08 7.62 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -10.16 180)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.254 1.778 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C_Small"
+				(at 0.254 -2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "capacitor cap"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_Small_0_1"
+				(polyline
+					(pts
+						(xy -1.524 -0.508) (xy 1.524 -0.508)
+					)
+					(stroke
+						(width 0.3302)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.508) (xy 1.524 0.508)
+					)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.032)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R_Small"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 0.762 0.508 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "R_Small"
+				(at 0.762 -1.016 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_Small_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Sensor_Optical:SFH309"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SFH309"
+				(at 5.08 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+				(at 12.192 -3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.osram-os.com/Graphics/XPic2/00101811_0.pdf/SFH%20309,%20SFH%20309%20FA,%20Lead%20(Pb)%20Free%20Product%20-%20RoHS%20Compliant.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Phototransistor NPN"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "npn phototransistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED*3.0mm*Clear*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SFH309_0_1"
+				(polyline
+					(pts
+						(xy -1.905 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 2.54) (xy -1.905 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 3.175) (xy -1.905 1.27) (xy -1.905 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 4.445) (xy -1.27 2.54) (xy -1.27 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SFH309_1_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "TestPoint_1"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.762) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_1_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 138.43 81.28)
+		(diameter 0)
+		(color 0 0 0 1)
+		(uuid "0835b111-be96-423a-bb5e-b7690175e56f")
+	)
+	(junction
+		(at 113.03 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2813555d-06d3-4e50-ad62-24348e7e7569")
+	)
+	(junction
+		(at 140.97 81.28)
+		(diameter 0)
+		(color 0 0 0 1)
+		(uuid "33e10f82-a106-4449-9a42-9380632d08e7")
+	)
+	(junction
+		(at 113.03 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7409e32d-800d-476e-a3d4-f02aa2c7b872")
+	)
+	(junction
+		(at 113.03 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a40b21c-0644-43ca-8832-11bfea1fdd0d")
+	)
+	(junction
+		(at 113.03 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f645443-6249-4e34-b2af-c592cae8d0ab")
+	)
+	(junction
+		(at 132.08 114.3)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b7ca405e-850f-4f4c-aa06-00283b422b87")
+	)
+	(junction
+		(at 132.08 134.62)
+		(diameter 0)
+		(color 0 0 0 1)
+		(uuid "d9c978b0-8599-4aff-8fff-4ee7334f977f")
+	)
+	(wire
+		(pts
+			(xy 132.08 121.92) (xy 132.08 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "072b30a3-4d8a-4f86-b449-c55028197d72")
+	)
+	(wire
+		(pts
+			(xy 110.49 86.36) (xy 113.03 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b79fcdc-504e-4f26-bae6-910fc17ed2a2")
+	)
+	(wire
+		(pts
+			(xy 135.89 83.82) (xy 135.89 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d8757b3-34dd-4a8b-acc1-17692669ad55")
+	)
+	(wire
+		(pts
+			(xy 113.03 106.68) (xy 113.03 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c38dd32-a3af-496f-a225-05d6d3294564")
+	)
+	(wire
+		(pts
+			(xy 153.67 81.28) (xy 140.97 81.28)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "2510ae7d-97dd-4a08-a092-47d5da76da5e")
+	)
+	(wire
+		(pts
+			(xy 132.08 114.3) (xy 128.27 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32c7cf08-2d98-48d3-9945-548f4304f7ca")
+	)
+	(wire
+		(pts
+			(xy 113.03 86.36) (xy 153.67 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43468df5-58c6-4816-8306-96459e24b8c3")
+	)
+	(wire
+		(pts
+			(xy 130.81 81.28) (xy 138.43 81.28)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "54d0085b-7a9c-4cd2-a37e-3e2d7be1e3d3")
+	)
+	(wire
+		(pts
+			(xy 144.78 67.31) (xy 130.81 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6acbedfd-56e2-4ab7-b58a-669a4661bb48")
+	)
+	(wire
+		(pts
+			(xy 113.03 99.06) (xy 147.32 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7083b03e-438c-4fa2-bd66-e1b542525f68")
+	)
+	(wire
+		(pts
+			(xy 110.49 99.06) (xy 113.03 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "709641f6-d1bc-4839-bf7e-b7a8c7cc2518")
+	)
+	(wire
+		(pts
+			(xy 147.32 91.44) (xy 153.67 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70f6ac1f-73a1-4c09-9d6c-bcd982757d4c")
+	)
+	(wire
+		(pts
+			(xy 135.89 114.3) (xy 132.08 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79de3347-e867-4f3d-99a7-1bc80983c517")
+	)
+	(wire
+		(pts
+			(xy 113.03 106.68) (xy 149.86 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e11843a-0aa5-49d2-81d8-db733c3516ac")
+	)
+	(wire
+		(pts
+			(xy 128.27 134.62) (xy 132.08 134.62)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "7ea0eeaa-6ab2-4514-9dfd-5128942c8a33")
+	)
+	(wire
+		(pts
+			(xy 113.03 99.06) (xy 113.03 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f64d332-9c1e-4767-a089-6b4e8347091c")
+	)
+	(wire
+		(pts
+			(xy 130.81 78.74) (xy 153.67 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "81736887-9474-403c-bef7-ae3a4b8b87d8")
+	)
+	(wire
+		(pts
+			(xy 144.78 76.2) (xy 144.78 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83c30f97-f826-4994-a567-d2eece764aeb")
+	)
+	(wire
+		(pts
+			(xy 149.86 93.98) (xy 149.86 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86227621-dabb-4680-8e06-f8d82347b499")
+	)
+	(wire
+		(pts
+			(xy 138.43 81.28) (xy 140.97 81.28)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "8658c638-0303-4a3b-98ff-94948bec2c73")
+	)
+	(wire
+		(pts
+			(xy 138.43 69.85) (xy 138.43 81.28)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "8ffdead5-0d1f-4ee8-8b35-af905cfd2f15")
+	)
+	(wire
+		(pts
+			(xy 132.08 134.62) (xy 132.08 132.08)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "9ce502c6-4556-4baf-84af-bf377ec7739e")
+	)
+	(wire
+		(pts
+			(xy 203.2 85.09) (xy 203.2 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a18d8b40-b18f-4688-b799-a115ecc99003")
+	)
+	(wire
+		(pts
+			(xy 140.97 134.62) (xy 140.97 81.28)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "a1e69b20-d83b-4557-a329-02d3941e8f5e")
+	)
+	(wire
+		(pts
+			(xy 144.78 88.9) (xy 144.78 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7571f90-6a29-4ebe-8e5d-6f2344ad6671")
+	)
+	(wire
+		(pts
+			(xy 147.32 99.06) (xy 147.32 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae2037ac-88df-4e85-9b53-51aa152f39ef")
+	)
+	(wire
+		(pts
+			(xy 113.03 93.98) (xy 113.03 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0c437d0-21ce-42a2-ae9d-fb13839c414d")
+	)
+	(wire
+		(pts
+			(xy 220.98 85.09) (xy 220.98 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0fb7b4a-a761-4f7c-882e-23508c15f310")
+	)
+	(wire
+		(pts
+			(xy 110.49 106.68) (xy 113.03 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6dc5282-f07b-4a12-8dd2-401e570f7fc0")
+	)
+	(wire
+		(pts
+			(xy 132.08 114.3) (xy 132.08 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c90ecfc1-51a9-4865-93ce-ae78f64e922e")
+	)
+	(wire
+		(pts
+			(xy 220.98 100.33) (xy 220.98 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d15b35c5-306a-4a50-bc93-ba608ed8a95e")
+	)
+	(wire
+		(pts
+			(xy 113.03 93.98) (xy 144.78 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d642782b-e253-4ffa-b3ab-a483e022f765")
+	)
+	(wire
+		(pts
+			(xy 153.67 76.2) (xy 144.78 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd2aae5b-afdd-4d16-8377-d17a5fb019ef")
+	)
+	(wire
+		(pts
+			(xy 153.67 83.82) (xy 135.89 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e325eaaa-824e-4f6b-97e0-563c04dbdcd1")
+	)
+	(wire
+		(pts
+			(xy 203.2 100.33) (xy 203.2 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5ac74cd-ce10-497b-ad78-841d0e9a4d74")
+	)
+	(wire
+		(pts
+			(xy 138.43 69.85) (xy 130.81 69.85)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "ec4dc4b5-54cb-4095-8aa2-096305b07a25")
+	)
+	(wire
+		(pts
+			(xy 110.49 93.98) (xy 113.03 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1d801e3-6591-45f9-a717-54a731f0ffa0")
+	)
+	(wire
+		(pts
+			(xy 149.86 93.98) (xy 153.67 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2b5b885-5247-439e-a518-68160d516c55")
+	)
+	(wire
+		(pts
+			(xy 153.67 88.9) (xy 144.78 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9772a70-2c66-4fad-8668-9b5c6e1560eb")
+	)
+	(wire
+		(pts
+			(xy 113.03 86.36) (xy 113.03 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc72785f-25e5-47c5-b9fe-f5dd9577b0af")
+	)
+	(wire
+		(pts
+			(xy 132.08 134.62) (xy 140.97 134.62)
+		)
+		(stroke
+			(width 0.254)
+			(type default)
+			(color 0 0 0 1)
+		)
+		(uuid "fe8cc9e9-3d62-4710-bef1-ff77e3da80d5")
+	)
+	(text "IR_SNS"
+		(exclude_from_sim no)
+		(at 115.062 80.518 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "1418001e-5727-4b08-8301-4aae5a09eb84")
+	)
+	(text "IR_LED"
+		(exclude_from_sim no)
+		(at 115.57 68.834 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "2b6c6dc0-b716-48b4-a925-bc89d699a64a")
+	)
+	(text "VIBR"
+		(exclude_from_sim no)
+		(at 96.774 90.424 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "4e3fcc11-3e77-4b12-bb49-e68a0cb83884")
+	)
+	(text "LED"
+		(exclude_from_sim no)
+		(at 118.618 124.714 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "b8b0aeda-1f4a-4645-9ddd-e436c629875e")
+	)
+	(text "MOT"
+		(exclude_from_sim no)
+		(at 96.774 103.124 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "c15ee675-7406-4561-930d-010d22f2d8a2")
+	)
+	(label "M_GND"
+		(at 143.51 81.28 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b8311fca-05ec-4137-8c29-1fdaaac7422c")
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 130.81 78.74 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "17a667af-d882-4b7c-8f24-f70721158de8")
+		(property "Reference" "MPAD23"
+			(at 123.19 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 118.11 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 130.81 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 130.81 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f72c461b-1030-46bb-9c84-4da1080ee13f")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD23")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD51")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD37")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 132.08 128.27 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "33d89d87-b3b1-4f08-af39-d4a8f3702c50")
+		(property "Reference" "M_D2"
+			(at 134.62 125.4124 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 134.62 127.9524 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 132.08 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 132.08 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "23f6b938-a52b-45ec-a19c-34b52f164df6")
+		)
+		(pin "1"
+			(uuid "02ee6db2-5531-4462-aeea-ce8faf483870")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "M_D2")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "M_D4")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "M_D3")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "M_D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 128.27 114.3 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37d04199-ca25-40d8-8b79-7c87854bf4de")
+		(property "Reference" "MPAD19"
+			(at 120.396 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 115.57 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 128.27 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 128.27 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da51cb42-9a4b-42da-9999-e608e634af9a")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD19")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD47")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD33")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 132.08 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3969df6d-9cc1-4d41-86e8-7a9159900175")
+		(property "Reference" "M_R2"
+			(at 134.62 118.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0R"
+			(at 134.62 120.6499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 132.08 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 132.08 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 132.08 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6e124566-e818-4d4c-82be-0abf23e039a3")
+		)
+		(pin "1"
+			(uuid "da909489-2a31-4671-a40e-bdcef896e3ce")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "M_R2")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "M_R4")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "M_R3")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "M_R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "TestPoint_1")
+		(lib_id "Connector:TestPoint")
+		(at 110.49 86.36 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4a2da93c-0723-4049-b69d-90cb044f3261")
+		(property "Reference" "MPAD15"
+			(at 102.87 88.138 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 97.79 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 110.49 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 110.49 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e3ad6731-cdfa-4c3f-8edb-19df5fd9ca34")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD15")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD43")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD29")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 113.03 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4d5ed302-1681-4b7c-98db-600f893ddb53")
+		(property "Reference" "M_C4"
+			(at 115.57 101.6062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 115.57 104.1462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 113.03 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 113.03 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47fb3c09-5d3a-495b-9a01-2e6e06507f27")
+		)
+		(pin "2"
+			(uuid "53332639-db8c-4fb3-be86-2f1487d1c8f6")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "M_C4")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "M_C8")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "M_C6")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "M_C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 110.49 99.06 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "54ba0311-83f3-4888-a262-b393c74b595a")
+		(property "Reference" "MPAD17"
+			(at 102.616 100.838 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 97.79 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 110.49 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 110.49 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "faaf82b7-40d8-4d09-945f-5016f69fbd66")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD17")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD45")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD31")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 110.49 106.68 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "647de50f-2f6f-4ad9-becb-6a5976588a01")
+		(property "Reference" "MPAD18"
+			(at 102.616 104.902 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 97.79 106.68 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 110.49 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 110.49 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa2cd2a7-978e-48b8-956c-7363e9efb8b2")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD18")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD46")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD32")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Sensor_Optical:SFH309")
+		(at 218.44 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6d99f9fe-00d7-44fd-bc8b-b9e4986b17ad")
+		(property "Reference" "Q5"
+			(at 223.52 91.9606 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SFH309"
+			(at 223.52 94.5006 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+			(at 230.632 97.536 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.osram-os.com/Graphics/XPic2/00101811_0.pdf/SFH%20309,%20SFH%20309%20FA,%20Lead%20(Pb)%20Free%20Product%20-%20RoHS%20Compliant.pdf"
+			(at 218.44 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Phototransistor NPN"
+			(at 218.44 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c682202b-58b4-41ff-989a-4ec31c008360")
+		)
+		(pin "2"
+			(uuid "30a1c072-2fdf-4ba6-9471-cda28ce68835")
+		)
+		(instances
+			(project ""
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "Q5")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "Q7")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "Q6")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 110.49 93.98 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "73443aa0-c29c-4172-bfbd-0b56c23e5a82")
+		(property "Reference" "MPAD16"
+			(at 102.87 91.948 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 97.79 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 110.49 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 110.49 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 110.49 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a6f8f9e-fb13-492f-a1a4-0aadeb80dc14")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD16")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD44")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD30")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 203.2 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "85d9cbca-a5ce-4eff-b814-13d215dd7834")
+		(property "Reference" "MPAD26"
+			(at 201.168 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 203.2 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 198.12 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 198.12 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 203.2 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23a26a93-db6a-4e95-9d8c-257429b30456")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD26")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD54")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD40")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 130.81 69.85 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "94331b87-77b8-44b7-93ef-0c65e3f7cb74")
+		(property "Reference" "MPAD22"
+			(at 123.19 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 118.11 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 130.81 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 130.81 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ac170ad3-b2ba-43c4-bde7-d50fec1a12a8")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD22")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD50")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD36")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 220.98 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a0cf51fd-b3a7-422f-abb7-bd94489d73c6")
+		(property "Reference" "MPAD27"
+			(at 223.012 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 220.98 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 226.06 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 226.06 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 220.98 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "23cf78a0-dbb0-4611-899d-9f8d9f3454dd")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD27")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD55")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD41")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x08_Pin")
+		(at 158.75 83.82 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a135ee89-1ff4-45b5-8aa6-83a6a25a6be3")
+		(property "Reference" "CJ2"
+			(at 160.02 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x08_Pin"
+			(at 160.02 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_1x08_P1.27mm_Horizontal"
+			(at 158.75 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x08, script generated"
+			(at 158.75 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "3a30c014-44e1-49ae-9af0-f17595da6d49")
+		)
+		(pin "2"
+			(uuid "5f3b22b3-32ab-45f5-a159-956fada2ac3f")
+		)
+		(pin "1"
+			(uuid "002214d1-1e40-48c4-ad88-2550bcee6d8b")
+		)
+		(pin "7"
+			(uuid "7eebdae8-1a92-4d14-abcf-be7805129056")
+		)
+		(pin "8"
+			(uuid "56c4a33f-7fc3-4d4d-ab05-6f076083b58b")
+		)
+		(pin "5"
+			(uuid "b7427fe0-1bae-4502-811c-79dbecaee795")
+		)
+		(pin "3"
+			(uuid "6629356b-9ea8-4965-b291-b8db63897a9b")
+		)
+		(pin "4"
+			(uuid "74fbaae5-34b4-4537-b8a0-b5bfe49986af")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "CJ2")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "CJ4")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "CJ3")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "CJ1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "TestPoint_1")
+		(lib_id "Connector:TestPoint")
+		(at 130.81 67.31 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "abf75383-053f-4468-acd8-49d8a2c0f0ea")
+		(property "Reference" "MPAD21"
+			(at 123.19 67.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 118.11 67.31 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 130.81 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 130.81 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "be75d57e-470e-4996-8f3b-b696c00cfc5f")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD21")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD49")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD35")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 203.2 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c51e9024-ecfe-4f43-a991-91cf623db879")
+		(property "Reference" "MPAD25"
+			(at 205.232 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 203.2 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 208.28 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 208.28 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 203.2 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07e08c93-556a-4d3c-8fd7-c1cb704e850b")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD25")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD53")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD39")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 130.81 81.28 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cf54c3d6-0e2d-4099-ae86-5e8d8881a354")
+		(property "Reference" "MPAD24"
+			(at 123.19 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 118.11 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 130.81 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 130.81 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 130.81 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c7895be2-de78-4e0c-af4a-6d1de7d5438d")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD24")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD52")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD38")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 220.98 100.33 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e16c2e59-195e-4fbd-9125-2a98f959b665")
+		(property "Reference" "MPAD28"
+			(at 218.948 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 220.98 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 215.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 215.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 220.98 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c922296d-c8ed-4c8d-8f43-cdd886e073fc")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD28")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD56")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD42")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 128.27 134.62 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e2141a1d-f3d2-41c8-9435-1b4bd9c5c0c8")
+		(property "Reference" "MPAD20"
+			(at 119.888 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 115.57 134.62 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "MyLib:TestPoint_Pad_D1.5mm_3D_Model"
+			(at 128.27 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 128.27 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f3ccfcfc-c05d-4429-9887-cdeb0bdfbb10")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "MPAD20")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "MPAD48")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "MPAD34")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "MPAD6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 113.03 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3d090c0-f466-43ff-a6fb-a4164c9f2f19")
+		(property "Reference" "M_C3"
+			(at 115.57 88.9062 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 115.57 91.4462 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 113.03 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 113.03 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 113.03 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47626285-733f-4415-a3a1-55761ca3b58c")
+		)
+		(pin "2"
+			(uuid "7204b174-25e4-49d7-9b12-5b97b560482f")
+		)
+		(instances
+			(project "PillDispenser"
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "M_C3")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "M_C7")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "M_C5")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "M_C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 203.2 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f96a3370-5e97-4b44-8acb-d497587c59a8")
+		(property "Reference" "D4"
+			(at 205.74 89.8524 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LED"
+			(at 205.74 92.3924 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "LED_THT:LED_D3.0mm_Clear"
+			(at 203.2 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 203.2 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 203.2 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7e60c8bc-31fc-47c8-9ba0-21afb70d28db")
+		)
+		(pin "2"
+			(uuid "b787ed16-03a0-4d1c-ab50-8156380a3841")
+		)
+		(instances
+			(project ""
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/14b3171a-8624-434b-b6a3-134b01d19236"
+					(reference "D4")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/719b8ce5-aff5-4939-8ca1-8e3eb1cd6959"
+					(reference "D6")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/de549a77-b8a2-4479-a7fb-7f24055026ed"
+					(reference "D5")
+					(unit 1)
+				)
+				(path "/d6fc5aec-abfa-412f-86f7-0fcecb81b1e8/fe58d247-4872-464a-8341-0361dc5ac892/dfe288ae-7743-4d9c-9b9f-be4ffd1a294c"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
